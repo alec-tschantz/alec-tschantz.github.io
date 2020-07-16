@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : Alec Tschantz
+title                    : "Alec Tschantz"
 title_separator          : "-"
 name                     : &name "Alec Tschantz
 description              : &description "PhD student @ University of Sussex"
