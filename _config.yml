@@ -212,8 +212,8 @@ defaults:
   # _teaching
   - scope:
       path: ""
-      # type: teaching
-      type: posts
+      type: teaching
+      # type: posts
     values:
       layout: posts
       author_profile: true
