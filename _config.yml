@@ -9,9 +9,9 @@
 locale                   : "en-US"
 title                    : "Alec Tschantz"
 title_separator          : "-"
-name                     : &name "Alec Tschantz
+name                     : &name "Alec Tschantz"
 description              : &description "PhD student @ University of Sussex"
-url                      : https://alec-tschantz.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://alec-tschantz.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "alec-tschantz.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Alec Tschantz"
   avatar           : "profile.png"
-  bio              : "PhD student studying computational neuroscience"
+  bio              : "PhD student @ University of Sussex"
   location         : "Brighton, UK"
   employer         : "University of Sussex"
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=5NbVgO0AAAAJ"
-  email            :
+  email            :  "tschantz.alec@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -109,7 +109,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "@a_tschantz"
+  twitter          : "a_tschantz"
   vine             :
   weibo            :
   xing             :
