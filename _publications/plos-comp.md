@@ -3,7 +3,7 @@ title: "Learning action-oriented models through active inference"
 collection: publications
 permalink: /publication/plos-comp
 excerpt: 
-date: 2020-04-01
+date: 2020-04-23
 venue: 'PLOS Computational Biology'
 paperurl: 'https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007805'
 ---

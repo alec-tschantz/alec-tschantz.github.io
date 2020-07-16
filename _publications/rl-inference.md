@@ -3,7 +3,7 @@ title: "Reinforcement Learning through Active Inference"
 collection: publications
 permalink: /publication/rl-inference
 excerpt: 
-date: 2020-04-28
+date: 2020-02-28
 venue: 'Accepted @ Bridging AI and Cognitive Science Workshop (ICML)'
 paperurl: 'https://arxiv.org/abs/2002.12636'
 ---

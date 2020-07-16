@@ -3,7 +3,7 @@ title: "Reinforcement Learning as Iterative and Amortised Inference"
 collection: publications
 permalink: /publication/perspectives
 excerpt: 
-date: 2020-05-17
+date: 2020-06-13
 venue: ArXiv
 paperurl: 'https://arxiv.org/abs/2006.10524'
 ---

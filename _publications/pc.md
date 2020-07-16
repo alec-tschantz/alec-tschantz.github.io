@@ -6,7 +6,6 @@ excerpt:
 date: 2020-06-07
 venue: 'ArXiv'
 paperurl: 'https://arxiv.org/abs/2006.04182'
-teaser: "kim.jpg"
 ---
 
 _Beren Millidge,_ __Alexander Tschantz__, _Christopher L Buckley_
