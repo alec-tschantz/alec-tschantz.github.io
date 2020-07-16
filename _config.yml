@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Alec Tschantz"
+title                    : "Alexander Tschantz"
 title_separator          : "-"
-name                     : &name "Alec Tschantz"
-description              : &description "PhD student @ University of Sussex"
+name                     : &name "Alexander Tschantz"
+description              : &description "PhD Student @ University of Sussex"
 url                      : "https://alec-tschantz.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "alec-tschantz.github.io"
@@ -84,7 +84,7 @@ author:
   avatar           : "profile.png"
   bio              : "PhD student @ University of Sussex"
   location         : "Brighton, UK"
-  employer         : "University of Sussex"
+  employer         : # "University of Sussex"
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=5NbVgO0AAAAJ"
   email            :  "tschantz.alec@gmail.com"
