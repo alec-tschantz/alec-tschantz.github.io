@@ -7,7 +7,7 @@ author_profile: true
 
 <style>
 hr.new {
-  border-top: 3px dashed;
+  border-top: 1px dashed;
 }
 
 </style>
