@@ -8,7 +8,7 @@ venue: Response in Trends in Cognitive Science
 paperurl: 'https://psyarxiv.com/w8y9p/'
 ---
 
-_Anil K. Seth, Beren Millidge, Christopher L Buckley,_ __Alexander Tschantz
+_Anil K. Seth, Beren Millidge, Christopher L Buckley,_ __Alexander Tschantz__
 
 [[Paper](https://psyarxiv.com/w8y9p/)] 
 
