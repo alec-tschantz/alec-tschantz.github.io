@@ -1,14 +1,17 @@
 ---
-title: "inferactively"
+title: "Infer Actively"
 collection: teaching
-type: "A modular Python implementation of active inference for Markov Decision Processes"
+type: ""
+excerpt: "A modular Python implementation of active inference for Markov Decision Processes"
 permalink: /teaching/inferactively
 venue: ""
 date: 2020-01-01
 location: ""
 ---
 
-# Active Inference for Markov Decision Processes 
+__Active Inference for Markov Decision Processes__
+
+[[Repo](https://github.com/alec-tschantz/inferactively)]
 
 An Python-based implementation of active inference for Markov Decision Processes,
 based on functions from the `SPM` [implementation](https://www.fil.ion.ucl.ac.uk/spm/doc/)
