@@ -14,7 +14,7 @@
 
 <div class="{{ include.type | default: "list" }}__item">
   <style>
-    a { color: #474646; } /* CSS link color */
+    a { color: #737373; } /* CSS link color */
   </style>
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
@@ -42,7 +42,7 @@
     {% endif %}
 
         {% if post.collection == 'teaching' %}
-          <p><i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+          <p></p>
         {% elsif post.collection == 'publications' %}
           <p><i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.date %}

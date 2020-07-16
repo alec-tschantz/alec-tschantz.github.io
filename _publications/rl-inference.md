@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/rl-inference
 excerpt: 
 date: 2020-02-28
-venue: 'Accepted @ Bridging AI and Cognitive Science Workshop (ICML)'
+venue: 'Spotlight @ Bridging AI and Cognitive Science Workshop (ICML)'
 paperurl: 'https://arxiv.org/abs/2002.12636'
 ---
 
