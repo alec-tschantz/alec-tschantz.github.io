@@ -3,8 +3,8 @@ title: "Scaling active inference"
 collection: publications
 permalink: /publication/scaling-inference
 excerpt: 
-date: 2020-07-01
-venue: "Published in IEEE WCCI"
+date: 2019-11-24
+venue: "Published @ IEEE WCCI"
 paperurl: 'https://arxiv.org/abs/1911.10601'
 ---
 
