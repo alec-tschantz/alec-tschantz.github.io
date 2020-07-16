@@ -212,9 +212,9 @@ defaults:
   # _teaching
   - scope:
       path: ""
-      type: teaching
+      # type: teaching
     values:
-      layout: single
+      layout: posts
       author_profile: true
       share: true
       comments: true
