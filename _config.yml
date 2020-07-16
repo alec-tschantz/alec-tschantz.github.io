@@ -213,6 +213,7 @@ defaults:
   - scope:
       path: ""
       # type: teaching
+      type: posts
     values:
       layout: posts
       author_profile: true

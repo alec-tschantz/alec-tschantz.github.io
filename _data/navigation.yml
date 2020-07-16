@@ -4,9 +4,10 @@ main:
   - title: "Publications"
     url: /publications/
 
+  - title: "Software"
+    url: /teaching/
+
   - title: "Blog Posts"
     url: /year-archive/
 
-  - title: "Code"
-    url: /teaching/   
 
