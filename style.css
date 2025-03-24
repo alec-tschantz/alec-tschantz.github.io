@@ -1,0 +1,95 @@
+/* Global reset & base style */
+body {
+  margin: 0;
+  padding: 0;
+  background: #181818;
+  color: #f7f7f7;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Container to align header and main content together */
+.container {
+  max-width: 800px; /* Adjust as you like */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header and social icons */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px; /* space between header and main content */
+}
+
+.site-title a {
+  color: #ff8754;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.site-title a:hover {
+  color: #ffa577;
+}
+
+.social-icons a {
+  color: #ff8754;
+  margin-left: 15px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #ffa577;
+}
+
+/* Main content (within .container) */
+main h2 {
+  margin-top: 1rem;
+  color: #ff8754;
+}
+
+main p {
+  margin: 1rem 0;
+}
+
+/* Box style for the blog post content */
+article {
+  border: 1px solid #ff8754;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+article h2 {
+  margin-top: 0;
+}
+
+.date {
+  color: #cccccc;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+code {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+}
+
+/* Post listing on index page */
+.post-box {
+  border: 1px solid #ff8754;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.post-box a {
+  color: #ff8754;
+  text-decoration: none;
+}
+
+.post-box a:hover {
+  text-decoration: underline;
+}
