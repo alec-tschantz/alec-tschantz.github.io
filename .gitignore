@@ -1,0 +1,38 @@
+# Jekyll build artifacts
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# Bundler & Ruby environment
+.bundle/
+vendor/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Gem files
+*.gem
+
+# Log files
+*.log
+
+# Environment files
+.env
+
+# Byebug (or other debug tool) history
+.byebug_history
+
+# Ignore build output moved into main (if you ever test that manually)
+*.html
+*.xml
+*.json
+*.txt
+*.css
+*.js
+*.map
+
+# Ignore swap/temp/editor files
+*~
+*.swp
+*.swo
