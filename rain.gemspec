@@ -1,10 +1,10 @@
 Gem::Specification.new do |spec|
   spec.name          = "rain"
   spec.version       = "0.1.0"
-  spec.authors       = ["Inela Avdic Hukic"]
-  spec.email         = ["inelaah@gmail.com"]
+  spec.authors       = ["Alexander Tschantz"]
+  spec.email         = ["tschantz.alec@gmail.com"]
 
-  spec.summary       = "Rain is a simple and clean Jekyll theme with focus on content."
+  spec.summary       = ""
   spec.homepage      = ""
   spec.license       = "MIT"
 

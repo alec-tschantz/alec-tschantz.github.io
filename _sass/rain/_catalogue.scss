@@ -28,11 +28,13 @@
     font-size: 1.8rem;
     font-weight: 500;
     margin: .5rem 0;
+    font-weight: 200;
+
   }
 
   &-line {
     @include transition(all .3s ease-out);
-    border-top: .15rem solid $default-shade;
+    // border-top: .15rem solid $default-shade;
     display: block;
     width: 3rem;
   }

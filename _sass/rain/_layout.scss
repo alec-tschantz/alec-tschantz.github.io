@@ -29,12 +29,15 @@ footer,
     display: inline-block;
     margin: 0;
     padding-right: .2rem;
+    font-weight: 300;
+
 
     &:hover,
     &:focus {
       opacity: .6;
     }
   }
+  
 
   &-social-icons {
     font-size: 1.3rem;
