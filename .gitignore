@@ -24,7 +24,6 @@ Thumbs.db
 .byebug_history
 
 # Ignore build output moved into main (if you ever test that manually)
-*.html
 *.xml
 *.json
 *.txt

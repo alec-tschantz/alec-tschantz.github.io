@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+
+    <!-- Academicons for Google Scholar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css"/>
+  
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        options: {
+          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+  
+  
+  </head>
+
+  <body>
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="{{ site.baseurl }}/">
+          <h2 class="nav-title">{{ site.title }}</h2>
+        </a>
+        <ul class="nav-social-icons">
+          {% if site.social.email %}
+            <li>
+              <a target="_blank" href="mailto:{{ site.social.email }}">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+          {% endif %}
+
+          {% if site.social.github %}
+            <li>
+              <a target="_blank" href="{{ site.social.github }}">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          {% endif %}
+
+          {% if site.social.twitter %}
+            <li>
+              <a target="_blank" href="{{ site.social.twitter }}">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+          {% endif %}
+
+          {% if site.social.scholar %}
+            <li>
+              <a target="_blank" href="{{ site.social.scholar }}">
+                <i class="ai ai-google-scholar"></i>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      {{ content }}
+    </main>
+
+    <footer>
+      <span>
+        &copy; <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> {{ site.author.name }}
+      </span>
+    </footer>
+  </body>
+</html>
