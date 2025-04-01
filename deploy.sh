@@ -1,10 +1,16 @@
 #!/bin/bash
 set -e
 
-echo "🔨 Building Jekyll site..."
-bundle exec jekyll build
+echo "Building Jekyll site..."
+docker-compose run --rm jekyll bundle exec jekyll build
 
-echo "🚀 Deploying to gh-pages branch..."
+echo "Deploying to gh-pages branch..."
+
+if [ -d ../gh-pages-tmp ]; then
+  echo "🧹 Removing existing worktree..."
+  git worktree remove ../gh-pages-tmp --force
+  rm -rf ../gh-pages-tmp
+fi
 
 # Save current branch name (assumes main, but good for generality)
 CURRENT_BRANCH=$(git symbolic-ref --short HEAD)
@@ -31,4 +37,4 @@ cd ..
 # Clean up
 git worktree remove gh-pages-tmp
 
-echo "✅ Deployment done! Site is live at: https://<your-username>.github.io"
+echo "Deployment done! Site is live at: https://<your-username>.github.io"
