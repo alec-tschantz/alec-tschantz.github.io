@@ -32,6 +32,13 @@ related_posts_section:
   max_count:        5
   min_common_tags:  2
 
+nav:
+  - title: "Home"
+    url: "/home"
+  - title: "Blog"
+    url: "/home"
+
+
 # Links to social media
 social:
   email: tschantz.alec@gmail.com
