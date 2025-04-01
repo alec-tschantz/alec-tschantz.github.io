@@ -27,7 +27,7 @@ Thumbs.db
 *.xml
 *.json
 *.txt
-*.css
+# *.css
 *.js
 *.map
 
