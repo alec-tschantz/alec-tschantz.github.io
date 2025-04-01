@@ -2,6 +2,7 @@
 title:          Alexander Tschantz
 description:    ""
 url:            https://alec-tschantz.github.io/
+baseurl: "" 
 destination: docs
 
 # Author
