@@ -2,6 +2,7 @@
 title:          Alexander Tschantz
 description:    ""
 url:            https://alec-tschantz.github.io/
+destination: docs
 
 # Author
 author:
@@ -31,12 +32,6 @@ paginate:       5
 related_posts_section:
   max_count:        5
   min_common_tags:  2
-
-nav:
-  - title: "Home"
-    url: "/home"
-  - title: "Blog"
-    url: "/home"
 
 
 # Links to social media
