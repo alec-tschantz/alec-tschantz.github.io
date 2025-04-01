@@ -1,7 +1,8 @@
 # Rain
 
 ```sh
-bundle install --path vendor/bundle
+docker-compose build
+docker-compose up
 ```
 
 Rain is a simple and clean Jekyll theme with focus on content. It's a fork of [Tale theme](https://github.com/chesterhow/tale) with additional customizations.
