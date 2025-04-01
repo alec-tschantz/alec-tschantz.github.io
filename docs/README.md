@@ -3,6 +3,9 @@
 ```sh
 docker-compose build
 docker-compose up
+
+docker-compose run --rm --service-ports jekyll bundle exec jekyll serve --host 0.0.0.0
+docker-compose run --rm jekyll bundle exec jekyll build
 ```
 
 Rain is a simple and clean Jekyll theme with focus on content. It's a fork of [Tale theme](https://github.com/chesterhow/tale) with additional customizations.
