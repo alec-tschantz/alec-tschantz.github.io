@@ -3,7 +3,7 @@ version: "3.8"
 services:
   jekyll:
     build: .
-    platform: linux/arm64  # Matches your M1/M2 Mac natively
+    platform: linux/arm64  
     ports:
       - "4000:4000"
     volumes:
