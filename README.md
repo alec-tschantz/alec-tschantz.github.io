@@ -1,6 +1,6 @@
 # alec-tschantz.github.io
 
-Plain HTML, CSS and JS, served as-is by GitHub Pages. No build step.
+Plain HTML, CSS and JS, served as-is by GitHub Pages
 
 ```sh
 python3 -m http.server 8000   # then open http://localhost:8000
