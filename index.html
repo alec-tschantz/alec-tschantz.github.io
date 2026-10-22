@@ -1,5 +1,35 @@
----
-layout: home
-title: Home
----
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alexander Tschantz</title>
+  <link rel="icon" href="/assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/site.js"></script>
+  <script type="module" src="/assets/hero.js"></script>
+</head>
+<body>
+  <site-header></site-header>
+  <canvas class="backdrop" aria-hidden="true"></canvas>
 
+  <main class="home">
+    <h1 class="label">Posts</h1>
+
+    <!--
+      Newest first. Each entry can point at a page in /posts, a PDF, or anywhere else:
+
+      <li>
+        <a href="/posts/my-post.html">
+          <time datetime="2026-10-22">22 Oct 2026</time>
+          <span class="title">My post</span>
+        </a>
+      </li>
+    -->
+    <ol class="posts"></ol>
+  </main>
+</body>
+</html>

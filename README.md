@@ -1,140 +1,58 @@
-# Rain
+# alec-tschantz.github.io
+
+Plain HTML, CSS and JS, served as-is by GitHub Pages. No build step.
 
 ```sh
-docker-compose build
-docker-compose up
-
-docker-compose run --rm --service-ports jekyll bundle exec jekyll serve --host 0.0.0.0
-docker-compose run --rm jekyll bundle exec jekyll build
+python3 -m http.server 8000   # then open http://localhost:8000
 ```
 
-Rain is a simple and clean Jekyll theme with focus on content. It's a fork of [Tale theme](https://github.com/chesterhow/tale) with additional customizations.
+- `index.html`: the home page and post list
+- `assets/site.js`: the shared header (name and social links)
+- `assets/hero.js`: the animated contour backdrop
+- `assets/post.js`: maths (KaTeX) and code highlighting for posts
+- `assets/style.css`: all styles
 
+## Adding a post
 
-## Features
-- Compatible with GitHub Pages
-- Responsive design
-- Syntax highlighting
-- Markdown and HTML text formatting
-- Pagination of posts
-- Related articles section
-- Links to social media
+A post is any HTML page, so it can hold figures, canvas or full interactive visualisations.
+Create `posts/my-post.html` (or `posts/my-post/index.html` with its files alongside):
 
-
-## Getting Started
-
-You will need to install Jekyll on your machine. Installation depends on your operating system and it is explained [here](https://jekyllrb.com/docs/installation/).
-
-Then create a new directory and clone this repository:
-
-```bash
-mkdir rain
-cd rain
-git clone https://github.com/inelaah/rain.git
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My post · Alexander Tschantz</title>
+  <link rel="icon" href="/assets/favicon.svg">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/site.js"></script>
+  <script src="/assets/post.js" defer></script>
+</head>
+<body class="page-body">
+  <site-header></site-header>
+  <main class="page">
+    <a class="back" href="/">← All posts</a>
+    <h1 class="page-title">My post</h1>
+    <time class="post-date" datetime="2026-10-22">22 Oct 2026</time>
+    <article class="prose">
+      <p>Inline maths like $q(s)$, and display maths on its own line:</p>
+      <p>$$F = \mathbb{E}_{q(s)}[\ln q(s) - \ln p(o, s)]$$</p>
+      <pre><code class="language-python">print("code is highlighted")</code></pre>
+    </article>
+  </main>
+</body>
+</html>
 ```
 
-Install all dependencies:
+Then add it to the top of the list in `index.html`:
 
-```bash
-bundle install
+```html
+<li>
+  <a href="/posts/my-post.html">
+    <time datetime="2026-10-22">22 Oct 2026</time>
+    <span class="title">My post</span>
+  </a>
+</li>
 ```
-
-## Site Configuration
-
-There is a configuration file `_config.yml` in root directory. You should overwrite it to fit to your needs.
-
-An example of `_config.yml` looks like this:
-
-```bash
-# Site settings
-title:          Rain
-description:    "Rain is a simple and clean Jekyll theme with focus on content."
-url:            https://github.com/inelaah/rain
-
-# Author
-author:
-  name:         Inela Avdic Hukic
-  email:        inelaah@gmail.com
-  url:          https://inelaah.com
-
-# Build settings
-markdown:       kramdown
-
-# Assets
-sass:
-  sass_dir:     _sass
-  style:        compressed
-
-# Gems
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
-  # - jemoji #Uncomment this to allow emoji in your post
-
-# Permalinks
-permalink:      /:year-:month-:day/:title
-paginate:       5
-
-# Related posts settings
-related_posts_section:
-  max_count:        5
-  min_common_tags:  2
-
-# Links to social media
-social:
-  email: inelaah@gmail.com
-  github: https://github.com/inelaah
-  twitter: https://twitter.com
-  linkedin: https://ba.linkedin.com/in/inela-avdic-hukic-322354131
-```
-
-## Favicons
-
-It is recommended to put your own favicons:
-
-- `apple-touch-icon.png` (180x180)
-- `favicon-32x32.png` (32x32)
-- `favicon-16x16.png` (16x16)
-- `mstile-150x150.png` (150x150)
-- `android-chrome-192x192.png` (192x192)
-- `android-chrome-512x512.png` (512x512)
-
-in `/assets` directory. They're easily created via [Favicon Generator](https://realfavicongenerator.net/).
-
-
-## Related Articles
-
-Related articles section is based on article tags. For every post that you want to have this section you should define tags.
-To include related articles in the bottom of the content you should define `related_posts_section` property in configuration file.
-It contains two fields: `max_count` and `min_common_tags`:
-- `max_count` represents the maximum number of related articles shown on a single article.
-- `min_common_tags` represents the minimum number of common tags for two articles to become related articles.
-
-## Links to social media
-
-To include links to social media in the top right corner of your page you need to define `social` property.
-It contains email, GitHub, Twitter and LinkedIn fields. You can leave out any of these if you don't want them to show up on your page.
-
-## Customizing Rain theme
-
-If you want to customize Rain theme you can fork this project and make some changes. If you just want to change the style then you can find Sass files in `_sass/rain` directory.
-
-## Adding your own posts
-
-You can see an example of post structure in `_posts` directory. After you clone this project you should clean the `_posts` directory and add your own posts.
-
-## Build and serve
-
-```
-bundle exec jekyll serve
-```
-
-Head over to http://127.0.0.1:4000/ to see your page.
-
-## License
-
-Rain is licensed under the MIT license. Check the [LICENSE](LICENSE.md) file for details.
-
-## Author
-
-[Inela Avdic Hukic](https://github.com/inelaah)
