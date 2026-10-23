@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The landscape of reasoning</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/site.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap">
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                   "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f0e8; --card: #fbf9f4; --fg: #1a1612; --muted: #736a61; --line: rgb(0 0 0 / 0.1);
+      --ink: #1a1612; --copper: #d9531a; --slate: #3d5a80;
+      --land-deep: #b9471f; --land-pale: #f1c4a3; --sea-pale: #c3d0de; --sea-deep: #2f4a6b; --plane: #e3e8ee; --ramp: 1;
+      --c-right: #ca6c47; --c-wrong: #97a8bb;
+      --sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    main { zoom: 0.8; max-width: 1180px; margin: 0 auto; padding: 130px clamp(16px, 4vw, 48px) 96px; }
+    header { text-align: center; margin-bottom: 10px; }
+    h1 { display: inline-block; font-weight: 400; font-size: clamp(30px, 4vw, 44px); letter-spacing: -0.02em; margin: 0; }
+    h1::after { content: ""; display: block; height: 1px; margin-top: 20px; background: color-mix(in srgb, var(--fg) 35%, transparent); }
+    .tagline { margin: 18px auto 0; max-width: 640px; font-size: 16px; line-height: 1.55; color: var(--muted); }
+    .legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; margin: 0 0 18px; font-size: 12.5px; color: var(--muted); }
+    .legend span { display: inline-flex; align-items: center; gap: 7px; }
+    .legend .sw { display: inline-block; width: 14px; height: 14px; border-radius: 3px; }
+    .legend .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--ink); }
+    .about { margin: 14px 0 0; border: 1px solid var(--line); border-radius: 8px; background: var(--card); }
+    .about summary { cursor: pointer; list-style: none; padding: 10px 16px; font-size: 13px; color: var(--muted); }
+    .about summary::-webkit-details-marker { display: none; }
+    .about summary::before { content: "+"; display: inline-block; width: 16px; font-family: var(--mono); color: var(--copper); }
+    .about[open] summary::before { content: "−"; }
+    .about p { margin: 0; padding: 0 16px 16px 32px; font-size: 14px; line-height: 1.65; color: color-mix(in srgb, var(--fg) 80%, var(--bg)); }
+    .about a { color: var(--copper); }
+    select { appearance: none; -webkit-appearance: none; font: inherit; font-size: 13px; color: var(--fg); background-color: var(--card);
+             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23736a61' stroke-width='1.4'/%3E%3C/svg%3E");
+             background-repeat: no-repeat; background-position: right 12px center; padding: 7px 34px 7px 14px; border: 1px solid var(--line);
+             border-radius: 999px; width: 380px; max-width: 100%; min-width: 0; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; cursor: pointer;
+             transition: border-color 0.15s, background-color 0.15s; }
+    select:hover { border-color: color-mix(in srgb, var(--fg) 30%, transparent); }
+    select:focus { outline: none; border-color: var(--copper); }
+    .relief { position: relative; height: 660px; max-width: 940px; margin: -60px auto 56px; }
+    .relief canvas { display: block; width: 100% !important; height: 100% !important; }
+    .scrub { display: flex; align-items: center; gap: 16px; padding: 12px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .scrub input[type=range] { flex: 1; min-width: 220px; accent-color: var(--copper); }
+    .btn { font: inherit; font-size: 13px; padding: 5px 14px; border: 1px solid var(--line); background: var(--card); color: var(--fg); border-radius: 4px; cursor: pointer; min-width: 64px; }
+    .below { max-width: 760px; margin: 30px auto 0; }
+    .reasoning { font-size: 14.5px; line-height: 1.65; max-height: 300px; overflow-y: auto; padding-right: 12px; white-space: pre-wrap; color: color-mix(in srgb, var(--fg) 25%, var(--bg)); }
+    .reasoning .read { color: var(--fg); }
+    .reasoning { scrollbar-width: thin; scrollbar-color: color-mix(in srgb, var(--fg) 22%, transparent) transparent; }   /* just the grey thumb, no track */
+    .reasoning::-webkit-scrollbar { width: 6px; }
+    .reasoning::-webkit-scrollbar-track { background: transparent; }
+    .reasoning::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--fg) 22%, transparent); border-radius: 3px; }
+    h4 { margin: 0 0 8px; font-weight: 500; font-size: 13px; }
+
+    @media (max-width: 960px) { .relief { height: 500px; } }
+    body[data-shot] site-header, body[data-shot] header, body[data-shot] main > :not(.relief) { display: none; }
+    body[data-shot] main { zoom: 1; max-width: none; padding: 0; }
+    body[data-shot] { background: transparent; }
+    body[data-shot] .relief { height: 100vh; max-width: none; margin: 0; }
+  </style>
+</head>
+<body>
+<site-header></site-header>
+<main>
+  <header><h1>The landscape of reasoning</h1>
+    <p class="tagline">An investigation into how reasoning reshapes the landscape around a model's answer.</p>
+  </header>
+  <div class="relief" id="relief">
+  </div>
+  <div class="legend">
+    <span><i class="sw" style="background: var(--c-right)"></i><span id="legend-right">right answer</span></span>
+    <span><i class="sw" style="background: var(--c-wrong)"></i>wrong answer</span>
+    <span><i class="sw" style="background: #ebe5da; border: 1px solid var(--line)"></i>no answer</span>
+    <span><i class="dot"></i>the model itself</span>
+  </div>
+  <div class="scrub">
+    <select id="traces"></select>
+    <button class="btn" id="play">play</button>
+    <input type="range" id="t" min="0" max="1000" value="0">
+  </div>
+  <details class="about">
+    <summary>How to read the figure</summary>
+    <p>We stop the model partway through its reasoning and ask for the answer. Then we make copies of it with their weights pushed a little in two fixed random directions, the method of <a href="https://arxiv.org/abs/1712.09913">Li et al. (2018)</a>, and ask each copy the same question. The height of the surface is the log-odds that a copy gives the right answer, log p(right) − log p(anything else): above the flat plane a copy is more likely than not to give it. The black dot is the original model. Because the directions never change, any change in the surface comes from the reasoning the model has read.</p>
+  </details>
+  <div class="below">
+    <div>
+      <h4 id="question"></h4>
+      <div class="reasoning" id="text"></div>
+    </div>
+  </div>
+</main>
+<script type="module" src="./app.js"></script>
+</body>
+</html>

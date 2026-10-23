@@ -4,10 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Alexander Tschantz</title>
-  <link rel="icon" href="/assets/favicon.svg">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Serif&display=swap">
   <link rel="stylesheet" href="/assets/style.css">
   <script src="/assets/site.js"></script>
   <script type="module" src="/assets/hero.js"></script>
@@ -24,12 +26,22 @@
 
       <li>
         <a href="/posts/my-post.html">
+          <img class="thumb" src="/posts/my-post/thumb.png" alt="">   (optional)
           <time datetime="2026-10-22">22 Oct 2026</time>
           <span class="title">My post</span>
+          <span class="summary">One line on what the post is.</span>   (optional)
         </a>
       </li>
     -->
-    <ol class="posts"></ol>
+    <ol class="posts">
+      <li>
+        <a href="/posts/landscape/">
+          <time datetime="2026-10-23">23 Oct 2026</time>
+          <span class="title">The landscape of reasoning</span>
+          <span class="summary">An investigation into how reasoning reshapes the landscape around a model's answer.</span>
+        </a>
+      </li>
+    </ol>
   </main>
 </body>
 </html>
